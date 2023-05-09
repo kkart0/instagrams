@@ -1,0 +1,9 @@
+{% extends 'basic.html'%}
+{%block title%}HOME{%endblock%}
+
+{%block body%}
+
+{% for i in post%}
+<img src="/media/{{i.image}}" alt="" width="100%" style="padding-left: 20%;">
+{%endfor%}
+{%endblock%}

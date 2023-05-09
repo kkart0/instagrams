@@ -1,0 +1,26 @@
+{% extends 'basic.html'%}
+{%block title%}Profile{%endblock%}
+
+{%block body%}
+
+<div class="body" style="background-color: black;width: 80%;padding-left: 20%;">
+    <div class="profile">
+        <div class="profilepic" style="border-radius: 50%;"><img src="" alt=""></div>
+        <div >
+
+            <div>{%for i in user%}
+                <h2 style="color:aliceblue">{{ i.name }}</h2>{%endfor%}
+                
+            </div>
+        </div>
+    </div>
+    <div><h4>Posts</h4></div>
+    <div style="display: grid;grid-template-columns: auto auto auto;">
+        {% for i in post%}
+        <img src="/media/{{i.image}}" alt="" width="100%" style="padding-left: 20%;">
+        {%endfor%}
+        
+    </div>
+</div>
+
+{%endblock%}
